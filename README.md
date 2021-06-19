@@ -2,6 +2,8 @@
 ![image](http://www.weedo.ltd/wp-content/uploads/2021/04/970x300-ABanner1.jpg)
 
 ## Summary
+Copied from Legodev/WEEDOX40firmware because could not control visibility of original repository.
+
 This is the repository that contains the community version firmware for the WEEDO X40 3D Printer. 
 
 The framework of the firmware is based on the Marlin 2.0.x version. 
