@@ -1,4 +1,4 @@
-#WARNING: Once you've flashed this firmware you will not be able to revert to the official firmware because WEEDO only provides the TF-card update style of firmware file, which is disabled in this version.
+# WARNING: Once you've flashed this firmware you will not be able to revert to the official firmware because WEEDO only provides the TF-card update style of firmware file, which is disabled in this version.
 
 # WEEDO X40 Community Firmware
 ![image](http://www.weedo.ltd/wp-content/uploads/2021/04/970x300-ABanner1.jpg)
