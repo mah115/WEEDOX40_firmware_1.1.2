@@ -11,6 +11,19 @@ We fixed some bugs in the dual x carriage modules.
 
 The user interaction and network communication modules are developed by WEEDO3D.
 
+Binary file is in **WEEDOX40_firmware\.pio\build\stm32_vet6\firmware.bin**
+
+Major differences from the official firmware:
+- Default baudrate set to 2000000 from 115200
+- G2/G3 implementation is updated from a newer version of Marlin which fixes a bug that results in incorrect move speeds.  This is needed to make it work well with Arc Welder
+- Z-axis offset adjustment resolution increased from 0.1mm to 0.02mm
+- Extruder will brush both sides of the nozzle before printing
+- Extruder nozzle will hover over home position while heating up instead of hovering over the part.
+- Added M922 and M923 commands to control the purging (M922 is usefull is you want to use a purgetower without using the wipers of the X40).
+    * M922 S0/S1 - Turn automatic filament extrusion Off/On (S1 is the default behavior of the original Printer)
+    * M923 S0/S1 - Turn multiple nozzle wipes Off/On (S0 is default for Weedo, S1 is default FW) 
+- Relaxed tolerances for temperature hysteresis
+- Changed linear advance K from 0.22 to 0.56 
 
 ## Compile requirements
 
