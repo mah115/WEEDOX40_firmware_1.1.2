@@ -15,11 +15,13 @@ Binary file is in **WEEDOX40_firmware\.pio\build\stm32_vet6\firmware.bin**
 
 Major differences from the official firmware:
 - Fixed hotend temp overshoot.  You will also need change the PID gains in EEPROM after flashing, run gcode:
-'''
+
+```
 M301 E0 P8 I0.23 D20
 M301 E1 P8 I0.23 D20
 M500
-'''
+```
+
 - Default baudrate set to 2000000 from 115200 to help with serial port bottlenecking when using Octoprint.
 - G2/G3 implementation is updated from a newer version of Marlin which fixes a bug that results in incorrect move speeds.  This is needed to make it work well with Arc Welder.
 - Z-axis offset adjustment resolution increased from 0.1mm to 0.02mm.
