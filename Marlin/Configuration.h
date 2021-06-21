@@ -246,13 +246,13 @@
   //#define SLOW_PWM_HEATERS      // PWM with very low frequency (roughly 0.125Hz=8s) and minimum state time of approximately 1s useful for heaters driven by a relay
   //#define PID_PARAMS_PER_HOTEND // Uses separate PID parameters for each extruder (useful for mismatched extruders)
                                   // Set/get with gcode: M301 E[extruder number, 0-2]
-  #define PID_FUNCTIONAL_RANGE 10 // If the temperature difference between the target temperature and the actual temperature
+  #define PID_FUNCTIONAL_RANGE 40 // If the temperature difference between the target temperature and the actual temperature
                                   // is more than PID_FUNCTIONAL_RANGE then the PID will be shut off and the heater will be set to min/max.
 
   // X40
-  #define DEFAULT_Kp 13.82
-  #define DEFAULT_Ki 1.36
-  #define DEFAULT_Kd 35.17
+  #define DEFAULT_Kp 8
+  #define DEFAULT_Ki 0.23
+  #define DEFAULT_Kd 20
 
 #endif // PIDTEMP
 
