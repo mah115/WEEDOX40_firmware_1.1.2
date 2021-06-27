@@ -1,8 +1,8 @@
 # WEEDO X40 Community Firmware
 ![image](http://www.weedo.ltd/wp-content/uploads/2021/04/970x300-ABanner1.jpg)
 
-## Summary: Copied from Legodev/WEEDOX40firmware because could not control visibility of original repository. 
-This is the repository that contains the community version firmware for the WEEDO X40 3D Printer. This firmware cannot be updated with the TF card.  To go back to the official firmware, load X40firmware_factory.bin
+## Summary: Originally copied from Legodev/WEEDOX40firmware. 
+This is the repository that contains the community version firmware for the WEEDO X40 3D Printer. This firmware cannot be updated with the TF card.  **To go back to the official firmware, load X40firmware_factory.bin**
 
 The framework of the firmware is based on the Marlin 2.0.x version. 
 We fixed some bugs in the dual x carriage modules.
