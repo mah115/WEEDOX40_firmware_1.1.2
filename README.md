@@ -12,11 +12,11 @@ The user interaction and network communication modules are developed by WEEDO3D.
 Binary file is in **WEEDOX40_firmware\.pio\build\stm32_vet6\firmware.bin**
 
 Major differences from the official firmware:
-- Fixed hotend temp overshoot.  You will also need change the PID gains in EEPROM after flashing, run gcode:
+- Improved hotend temp overshoot by increasing PID_FUNCTIONAL_RANGE from 10 to 30.  You will also need change the PID gains in EEPROM after flashing, run gcode:
 
 ```
-M301 E0 P8 I0.23 D20
-M301 E1 P8 I0.23 D20
+M301 E0 P8 I0.37 D40
+M301 E1 P8 I0.37 D40
 M500
 ```
 

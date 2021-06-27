@@ -921,7 +921,7 @@ void Temperature::min_temp_error(const heater_ind_t heater) {
           }
 
           work_pid[ee].Kd = work_pid[ee].Kd + PID_K2 * (PID_PARAM(Kd, ee) * (temp_dState[ee] - temp_hotend[ee].celsius) - work_pid[ee].Kd);
-          const float max_power_over_i_gain = float(PID_MAX) / PID_PARAM(Ki, ee) - float(MIN_POWER);
+          const float max_power_over_i_gain = (float(PID_MAX) / PID_PARAM(Ki, ee) - float(MIN_POWER))/3;
           temp_iState[ee] = constrain(temp_iState[ee] + pid_error, 0, max_power_over_i_gain);
           work_pid[ee].Kp = PID_PARAM(Kp, ee) * pid_error;
           work_pid[ee].Ki = PID_PARAM(Ki, ee) * temp_iState[ee];
