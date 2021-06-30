@@ -73,7 +73,7 @@
  */
 #define DGUS_BAUDRATE		115200
 
-#define HOST_BAUDRATE 	2000000		
+#define HOST_BAUDRATE 	1500000		
 	
 #define WIFI_BAUDRATE		256000
 
@@ -250,9 +250,9 @@
                                   // is more than PID_FUNCTIONAL_RANGE then the PID will be shut off and the heater will be set to min/max.
 
   // X40
-  #define DEFAULT_Kp 8
-  #define DEFAULT_Ki 0.37
-  #define DEFAULT_Kd 40
+  #define DEFAULT_Kp 9
+  #define DEFAULT_Ki 0.34
+  #define DEFAULT_Kd 30
 
 #endif // PIDTEMP
 

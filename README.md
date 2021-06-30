@@ -12,15 +12,15 @@ The user interaction and network communication modules are developed by WEEDO3D.
 Binary file is in **WEEDOX40_firmware\.pio\build\stm32_vet6\firmware.bin**
 
 Major differences from the official firmware:
-- Improved hotend temp overshoot by increasing PID_FUNCTIONAL_RANGE from 10 to 30.  You will also need change the PID gains in EEPROM after flashing, run gcode:
+- Improved hotend temp overshoot by increasing PID_FUNCTIONAL_RANGE from 10 to 30, implementing anti-windup, and assisting the initial solution with a pre-calculated bias.  You will also need change the PID gains in EEPROM after flashing, run gcode:
 
 ```
-M301 E0 P8 I0.37 D40
-M301 E1 P8 I0.37 D40
+M301 E0 P9 I0.34 D30
+M301 E1 P9 I0.34 D30
 M500
 ```
 
-- Default baudrate set to 2000000 from 115200 to help with serial port bottlenecking when using Octoprint.
+- Default baudrate set to 1500000 from 115200 to help with serial port bottlenecking when using Octoprint.
 - G2/G3 implementation is updated from a newer version of Marlin which fixes a bug that results in incorrect move speeds.  This is needed to make it work well with Arc Welder.
 - Z-axis offset adjustment resolution increased from 0.1mm to 0.02mm.
 - Extruder will brush both sides of the nozzle before printing.
