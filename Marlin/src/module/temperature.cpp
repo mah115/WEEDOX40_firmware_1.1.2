@@ -919,7 +919,8 @@ void Temperature::min_temp_error(const heater_ind_t heater) {
             work_pid[ee].Kd = 0.0;
             pid_reset[ee] = false;
           }
-
+          //mah115: limit integrator windup, increase PID_FUNCTIONAL_RANGE from 10 to 30, 
+          //only turn on integrator when proportional effort is <100, use precalcualted bias to help solution
           work_pid[ee].Kd = work_pid[ee].Kd + PID_K2 * (PID_PARAM(Kd, ee) * (temp_dState[ee] - temp_hotend[ee].celsius) - work_pid[ee].Kd);
           const float max_power_over_i_gain = (float(PID_MAX) / PID_PARAM(Ki, ee) - float(MIN_POWER))/3;
           temp_iState[ee] = constrain(temp_iState[ee] + pid_error, 0, max_power_over_i_gain);

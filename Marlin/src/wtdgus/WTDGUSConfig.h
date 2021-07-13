@@ -338,7 +338,7 @@
 #define ADDR_JOB_XDEC1				0x2613
 #define ADDR_JOB_XDEC2				0x2614
 #define ADDR_JOB_XDEC3				0x2615
-#define ADDR_JOB_YADD3				0x2625
+#define ADDR_JOB_YADD3				0x2625	 //mah115: modified Y and Z buttons to make left/right arrows consistent with coordinate increase/decrease
 #define ADDR_JOB_YADD2				0x2624
 #define ADDR_JOB_YADD1				0x2623
 #define ADDR_JOB_YDEC1				0x2622
