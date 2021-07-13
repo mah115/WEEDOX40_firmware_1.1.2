@@ -1,17 +1,18 @@
 # WEEDO X40 Community Firmware
 ![image](http://www.weedo.ltd/wp-content/uploads/2021/04/970x300-ABanner1.jpg)
 
-## Summary: Originally copied from Legodev/WEEDOX40firmware. 
-This is the repository that contains the community version firmware for the WEEDO X40 3D Printer. This firmware cannot be updated with the TF card.  **To go back to the official firmware, load X40firmware_factory.bin**
+## Summary:
+Originally copied from fork Legodev/WEEDOX40firmware, made a copy because that original repo is private and could disappear if Weedo pulls the plug.
+
+This is the repository that contains the community version firmware for the WEEDO X40 3D Printer. This firmware cannot be updated with the TF card.  
+
+- Binary file is in **WEEDOX40_firmware\.pio\build\stm32_vet6\firmware.bin**
+- **To go back to the official firmware, load X40firmware_factory.bin**
 
 The framework of the firmware is based on the Marlin 2.0.x version. 
-We fixed some bugs in the dual x carriage modules.
-
-The user interaction and network communication modules are developed by WEEDO3D.
-
-Binary file is in **WEEDOX40_firmware\.pio\build\stm32_vet6\firmware.bin**
 
 Major differences from the official firmware:
+- Fixed issue where turning on fan P0 also turn on fan P1
 - Improved hotend temp overshoot by increasing PID_FUNCTIONAL_RANGE from 10 to 30, implementing anti-windup, and assisting the initial solution with a pre-calculated bias.  You will also need change the PID gains in EEPROM after flashing, run gcode:
 
 ```
