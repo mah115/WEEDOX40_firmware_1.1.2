@@ -20,7 +20,7 @@ M301 E1 P9 I0.34 D30
 M500
 ```
 
-- Default baudrate set to 1500000 from 115200 to help with serial port bottlenecking when using Octoprint.
+- Default baudrate set to 230400 from 115200 to help with serial port bottlenecking when using Octoprint.
 - G2/G3 implementation is updated from a newer version of Marlin which fixes a bug that results in incorrect move speeds.  This is needed to make it work well with Arc Welder.
 - Z-axis offset adjustment resolution increased from 0.1mm to 0.02mm.
 - Extruder will brush both sides of the nozzle before printing.
