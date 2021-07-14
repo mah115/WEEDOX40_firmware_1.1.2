@@ -19,8 +19,8 @@ M500
 
 ## Major differences from the official firmware:
 - Improved jog mode responsiveness and made left/right arrows consistent with coordinate increase/decrease.
-- Fixed issue where turning on fan P0 also turn on fan P1
-- Improved hotend temp overshoot by increasing PID_FUNCTIONAL_RANGE from 10 to 30, implementing anti-windup, and assisting the initial solution with a pre-calculated bias.
+- Fixed bug where turning on fan P0 also turn on fan P1.
+- Fixed excessive hotend temp overshoot by modifying PID controller.
 - Default baudrate set to 230400 from 115200 to help with serial port bottlenecking when using Octoprint.
 - G2/G3 implementation is updated from a newer version of Marlin which fixes a bug that results in incorrect move speeds.  This is needed to make it work well with Arc Welder.
 - Z-axis offset adjustment resolution increased from 0.1mm to 0.02mm.
