@@ -3,7 +3,7 @@
 */
 
 /*
-* DGus ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¶ï¿½ï¿½ï¿½
+* DGus ´°¿ÚÀàµÄ¶¨Òå
 */
 
 #include "../../MarlinCore.h"
@@ -15,7 +15,7 @@
 #include "../WTHelpDoc.h"
 
 #ifdef DGUS_LCD
-// ï¿½ï¿½ï¿½Ã²Ëµï¿½ 
+// ÉèÖÃ²Ëµ¥ 
 void DGUS_Screen_Job::Init()
 {
 	dserial.LoadScreen(SCREEN_JOB);
@@ -235,7 +235,7 @@ void DGUS_Screen_Job::KeyProcess()
 		else if (gltouchpara.address == ADDR_HELP1_KEY)
 		{
 			if (gltouchpara.value == KEY_HELP1_BUTTON_RETURN)
-			{	// ï¿½ï¿½ï¿½ï¿½ï¿½Ô¼ï¿½ï¿½ï¿½ï¿½
+			{	// ·µ»Ø×Ô¼ì½çÃæ
 				dserial.LoadScreen(SCREEN_JOB);
 			}
 		}

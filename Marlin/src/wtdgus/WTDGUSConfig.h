@@ -3,7 +3,7 @@
 */
 
 /*
-* DGus ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+* DGus ²ÎÊý¶¨Òå
 */
 
 #ifndef WTDGUSCONFIG_H
