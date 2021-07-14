@@ -2,24 +2,22 @@
 ![image](http://www.weedo.ltd/wp-content/uploads/2021/04/970x300-ABanner1.jpg)
 
 ## Summary:
-Originally copied from fork Legodev/WEEDOX40firmware, made a copy because that original repo is private and could disappear if Weedo pulls the plug.
-This is the repository that contains the community version firmware for the WEEDO X40 3D Printer. This firmware cannot be updated with the TF card.  
+- Development discussions take place here: https://discord.gg/zXbhdnQyYH
 
+This is the repository that contains the community version firmware for the WEEDO X40 3D Printer.  Project was originally copied from fork Legodev/WEEDOX40firmware.  This firmware cannot be updated with the TF card.  The framework of the firmware is based on the Marlin 2.0.5 version. 
+
+## Instructions:
+- Upload firmware using Weedo's firmware flasher (see below)
 - You will also need update the PID gains in EEPROM after flashing, run gcode:
-
 ```
 M301 E0 P9 I0.34 D30
 M301 E1 P9 I0.34 D30
 M500
 ```
+- Precompiled binary file is in **WEEDOX40_firmware\.pio\build\stm32_vet6\firmware.bin**
+- To go back to the official firmware, load **X40firmware_factory.bin**
 
-
-- Binary file is in **WEEDOX40_firmware\.pio\build\stm32_vet6\firmware.bin**
-- **To go back to the official firmware, load X40firmware_factory.bin**
-
-The framework of the firmware is based on the Marlin 2.0.x version. 
-
-Major differences from the official firmware:
+## Major differences from the official firmware:
 - Improved jog mode responsiveness and made left/right arrows consistent with coordinate increase/decrease.
 - Fixed issue where turning on fan P0 also turn on fan P1
 - Improved hotend temp overshoot by increasing PID_FUNCTIONAL_RANGE from 10 to 30, implementing anti-windup, and assisting the initial solution with a pre-calculated bias.
