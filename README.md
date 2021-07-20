@@ -16,8 +16,9 @@ M500
 ```
 - Precompiled binary file is in **WEEDOX40_firmware\.pio\build\stm32_vet6\firmware.bin**
 - To go back to the official firmware, load **X40firmware_factory.bin**
+- When using Octoprint, Pronterface etc. set the serial baudrate to 230400.
 - To use it with Linux/Raspberry Pi, you need to replace the CH340 driver: https://learn.sparkfun.com/tutorials/how-to-install-ch340-drivers/all#linux
-- Also run 'sudo depmod' afterwards to make it load at startup.
+   - Also run 'sudo depmod' afterwards to make it load at startup.
 
 ## Major differences from the official firmware:
 - Improved jog mode responsiveness and made left/right arrows consistent with coordinate increase/decrease.
