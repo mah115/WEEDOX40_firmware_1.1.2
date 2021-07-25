@@ -277,33 +277,25 @@ void tool_change(const uint8_t new_tool, bool no_move /*=false*/)
             if (can_move_away && (toolchange_settings.x40_toolchange_config & 1))
             {
                 // 进行喷头擦除
-                // T0: -45 to -30
-                // T1: 330 to 352
                 if (new_tool == 0)
                 {   
                     if (toolchange_settings.x40_toolchange_config & 2)
                     {
-                      //do_blocking_move_to_x(-10, 100);
-                      //do_blocking_move_to_x(-45, 100);
-                      //do_blocking_move_to_x(-10, 100);
-                      do_blocking_move_to_x(-45, 100);
-                      do_blocking_move_to_x(-15, 100);
-                      do_blocking_move_to_x(-45, 100);
+                      do_blocking_move_to_x((X1_MIN_POS+20)-15, 100);
+                      do_blocking_move_to_x((X1_MIN_POS+20)+15, 100);
+                      do_blocking_move_to_x((X1_MIN_POS+20)-15, 100);
                     }
-                    do_blocking_move_to_x(-45, 50);
+                    //do_blocking_move_to_x(-45, 50);
                 }
                 else
                 {   
                     if (toolchange_settings.x40_toolchange_config & 2)
                     {
-                      //do_blocking_move_to_x(315, 100);
-                      //do_blocking_move_to_x(345, 100);
-                      //do_blocking_move_to_x(315, 100);
-                      do_blocking_move_to_x(345, 100);
-                      do_blocking_move_to_x(315, 100);
-                      do_blocking_move_to_x(345, 100);
+                      do_blocking_move_to_x((hotend_offset[1].x-20)+15, 100);
+                      do_blocking_move_to_x((hotend_offset[1].x-20)-15, 100);
+                      do_blocking_move_to_x((hotend_offset[1].x-20)+15, 100);
                     }
-                    do_blocking_move_to_x(345, 50);
+                    //do_blocking_move_to_x(345, 50);
                 }
 
                 // 新喷头移回原位置
