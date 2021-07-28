@@ -73,7 +73,7 @@
  */
 #define DGUS_BAUDRATE		115200
 
-#define HOST_BAUDRATE 	230400		
+#define HOST_BAUDRATE 	115200		
 	
 #define WIFI_BAUDRATE		256000
 

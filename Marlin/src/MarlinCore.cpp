@@ -996,6 +996,10 @@ void setup()
     // restart wificam
     // WT_ESP32_Restart();
     // safe_delay(500);
+    while(1){
+        safe_delay(1000);
+        SERIAL_ECHOLNPGM("Arduino Booted");
+    }
 
     SERIAL_ECHOLNPGM("start");
     PORT_REDIRECT(1);
